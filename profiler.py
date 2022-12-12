@@ -2,6 +2,7 @@ import torch
 import random
 import torch.nn as nn
 from torch.profiler import profile, record_function, ProfilerActivity
+from apex.contrib.layer_norm import FastLayerNorm
 
 torch._C._jit_override_can_fuse_on_cpu(False)
 torch._C._jit_override_can_fuse_on_gpu(False)
@@ -13,36 +14,67 @@ torch._C._jit_set_autocast_mode(True)
 torch._C._jit_set_nvfuser_single_node_mode(True)
 torch._C._debug_set_autodiff_subgraph_inlining(False)
 
-# Create data
-random.seed(42)
-nreduction = 20480
-input_shape = [2048, nreduction]
-input_dtype = torch.float16
-sizeof_input_dtype = 2
-inputs = torch.randn(input_shape, dtype=input_dtype, device='cuda')
-dataProcessed = (2*torch.numel(inputs) + nreduction*2)*sizeof_input_dtype
+# clear L2 cache to avoid speedup of gmem in repeated runs
+def clearL2Cache():
+  l2_cache_size = 40*1024*1024 #at::cuda::getCurrentDeviceProperties()->l2CacheSize;
+  nele = int(l2_cache_size / 4)
+  x = torch.empty(nele, dtype=torch.float32, device='cuda', requires_grad=False)
+  y = torch.clone(x)
 
-class Net(nn.Module):
-    def __init__(self):
-        super(Net, self).__init__()
-        self.ln = nn.LayerNorm(nreduction, dtype= input_dtype).cuda()
+def profileCode(model, inputs):
+    for _ in range(3):
+        output = model(inputs)
+    clearL2Cache()
+    with profile(
+            activities=[ProfilerActivity.CUDA],
+            schedule  = torch.profiler.schedule(wait=0, warmup=0, active=1), # just one iter, avoid L2 cache 
+            with_stack = False,
+            profile_memory=False,
+            record_shapes=True) as prof:
+        with record_function("model_inference"):
+            model(inputs)
+    res = (prof.key_averages().table(sort_by="cuda_time_total", row_limit=1))
+    last_line = res.splitlines()[-1]
+    cuda_time_us = last_line.split(" ")[-1] # xxx.000us
+    cuda_time_val= float(cuda_time_us[:len(cuda_time_us)-2]) #remove tailing us
+    return cuda_time_val # return micro-second
 
-    def forward(self, x):
-        out = self.ln(x)
-        return out
-model_eager = Net()
-model = torch.jit.script(model_eager)
-for _ in range(1):
-    output = model(inputs)
+def getSpeed(dim0=2048, dim1=20480):
+    input_shape = [dim0, dim1]
+    input_dtype = torch.float16
+    sizeof_input_dtype = 2
+    x = torch.randn(input_shape, dtype=input_dtype, device='cuda')
+    bytes_per_GB = 1024*1024*1024
+    dataProcessed = (2*torch.numel(x) + dim1*4)*sizeof_input_dtype / bytes_per_GB
 
-with profile(activities=[
-        ProfilerActivity.CPU, ProfilerActivity.CUDA],
-        with_stack = True,
-        profile_memory=True,
-        record_shapes=True) as prof:
-    with record_function("model_inference"):
-        model(inputs)
 
-print(prof.key_averages().table(sort_by="cuda_time_total", row_limit=10))
-print(prof.key_averages(group_by_stack_n=5).table(sort_by="self_cuda_time_total", row_limit=10))
-prof.export_chrome_trace("trace.json")
+    net = nn.LayerNorm(dim1, dtype= input_dtype).cuda();
+    apx = FastLayerNorm(dim1).half().cuda();
+
+    micro_to_second = 1.0e6
+    #print("===================== eager ============")
+    torch.cuda.empty_cache()
+    eager_us = profileCode(net, x)
+    eager = dataProcessed / eager_us * micro_to_second
+    
+    # apex
+    #print("===================== apex ============")
+    torch.cuda.empty_cache()
+    apex = dataProcessed / profileCode(apx, x) * micro_to_second
+
+    # fuser
+    #print("===================== fuser ============")
+    torch.cuda.empty_cache()
+    fuser_us = profileCode(torch.jit.script(net), x)
+    fuser = dataProcessed / fuser_us * micro_to_second
+
+    print("shape= {:} x {:} bw_eager= {:.1f} bw_apex= {:.1f} bw_fuser= {:.1f} GB/s, ratio= {:.2f} {:.2f}, fuser_time= {:.0f} micro-sec"
+    .format(dim0,dim1,eager,apex,fuser,fuser/eager,fuser/apex, fuser_us))
+
+
+#getSpeed(4096,40960)
+popular = [768,1024,2048,4096,8192,10240,20480,40960]
+#popular = [2048]
+for d1 in popular:
+    getSpeed(dim0=2048, dim1=d1)
+

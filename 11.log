@@ -1,0 +1,152 @@
+max_threads_in_block= 128
+max_multi_reduction_factor= 85
+max_persistent_buffer_size= 1536
+bdimy1= 1
+max_threads_in_block= 128
+bdimx * bdimz= 96
+bdimy2= 1
+bdimx3= 96bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 128
+max_multi_reduction_factor= 85
+max_persistent_buffer_size= 1536
+bdimy1= 1
+max_threads_in_block= 128
+bdimx * bdimz= 96
+bdimy2= 1
+bdimx3= 96bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 160
+max_multi_reduction_factor= 64
+max_persistent_buffer_size= 2048
+bdimy1= 1
+max_threads_in_block= 160
+bdimx * bdimz= 128
+bdimy2= 1
+bdimx3= 128bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 160
+max_multi_reduction_factor= 64
+max_persistent_buffer_size= 2048
+bdimy1= 1
+max_threads_in_block= 160
+bdimx * bdimz= 128
+bdimy2= 1
+bdimx3= 128bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 304
+max_multi_reduction_factor= 32
+max_persistent_buffer_size= 4096
+bdimy1= 1
+max_threads_in_block= 304
+bdimx * bdimz= 256
+bdimy2= 1
+bdimx3= 256bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 304
+max_multi_reduction_factor= 32
+max_persistent_buffer_size= 4096
+bdimy1= 1
+max_threads_in_block= 304
+bdimx * bdimz= 256
+bdimy2= 1
+bdimx3= 256bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 512
+max_multi_reduction_factor= 16
+max_persistent_buffer_size= 8192
+bdimy1= 1
+max_threads_in_block= 512
+bdimx * bdimz= 512
+bdimy2= 1
+bdimx3= 512bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 512
+max_multi_reduction_factor= 16
+max_persistent_buffer_size= 8192
+bdimy1= 1
+max_threads_in_block= 512
+bdimx * bdimz= 512
+bdimy2= 1
+bdimx3= 512bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 512
+max_multi_reduction_factor= 8
+max_persistent_buffer_size= 16384
+bdimy1= 1
+max_threads_in_block= 512
+bdimx * bdimz= 512
+bdimy2= 1
+bdimx3= 512bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 512
+max_multi_reduction_factor= 8
+max_persistent_buffer_size= 16384
+bdimy1= 1
+max_threads_in_block= 512
+bdimx * bdimz= 512
+bdimy2= 1
+bdimx3= 512bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 512
+max_multi_reduction_factor= 6
+max_persistent_buffer_size= 20480
+bdimy1= 1
+max_threads_in_block= 512
+bdimx * bdimz= 512
+bdimy2= 1
+bdimx3= 512bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 512
+max_multi_reduction_factor= 6
+max_persistent_buffer_size= 20480
+bdimy1= 1
+max_threads_in_block= 512
+bdimx * bdimz= 512
+bdimy2= 1
+bdimx3= 512bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 512
+max_multi_reduction_factor= 3
+max_persistent_buffer_size= 40960
+bdimy1= 1
+max_threads_in_block= 512
+bdimx * bdimz= 512
+bdimy2= 1
+bdimx3= 512bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 512
+max_multi_reduction_factor= 3
+max_persistent_buffer_size= 40960
+bdimy1= 1
+max_threads_in_block= 512
+bdimx * bdimz= 512
+bdimy2= 1
+bdimx3= 512bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 512
+max_multi_reduction_factor= 1
+max_persistent_buffer_size= 81920
+bdimy1= 1
+max_threads_in_block= 512
+bdimx * bdimz= 512
+bdimy2= 1
+bdimx3= 512bdimy3= 1
+inner_reduction_unroll_factor= 8
+max_threads_in_block= 512
+max_multi_reduction_factor= 1
+max_persistent_buffer_size= 81920
+bdimy1= 1
+max_threads_in_block= 512
+bdimx * bdimz= 512
+bdimy2= 1
+bdimx3= 512bdimy3= 1
+inner_reduction_unroll_factor= 8
+shape= 512 x 768 bw_eager= 114.4 bw_apex= 56.6 bw_fuser= 70.0 GB/s, ratio= 0.61 1.24
+shape= 512 x 1024 bw_eager= 155.8 bw_apex= 76.0 bw_fuser= 94.8 GB/s, ratio= 0.61 1.25
+shape= 512 x 2048 bw_eager= 309.7 bw_apex= 153.1 bw_fuser= 190.3 GB/s, ratio= 0.61 1.24
+shape= 512 x 4096 bw_eager= 611.0 bw_apex= 304.4 bw_fuser= 375.4 GB/s, ratio= 0.61 1.23
+shape= 512 x 8192 bw_eager= 944.2 bw_apex= 598.6 bw_fuser= 746.5 GB/s, ratio= 0.79 1.25
+shape= 512 x 10240 bw_eager= 972.5 bw_apex= 759.1 bw_fuser= 907.5 GB/s, ratio= 0.93 1.20
+shape= 512 x 20480 bw_eager= 596.8 bw_apex= 1026.7 bw_fuser= 979.3 GB/s, ratio= 1.64 0.95
+shape= 512 x 40960 bw_eager= 587.0 bw_apex= 1098.7 bw_fuser= 893.1 GB/s, ratio= 1.52 0.81
