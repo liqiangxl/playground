@@ -32,7 +32,7 @@ def profileCode(model, inputs):
             profile_memory=False,
             record_shapes=True) as prof:
         with record_function("model_inference"):
-            model(inputs)
+            output = model(inputs)
     res = (prof.key_averages().table(sort_by="cuda_time_total", row_limit=1))
     last_line = res.splitlines()[-1]
     cuda_time_us = last_line.split(" ")[-1] # xxx.000us
@@ -68,13 +68,47 @@ def getSpeed(dim0=2048, dim1=20480):
     fuser_us = profileCode(torch.jit.script(net), x)
     fuser = dataProcessed / fuser_us * micro_to_second
 
-    print("shape= {:} x {:} bw_eager= {:.1f} bw_apex= {:.1f} bw_fuser= {:.1f} GB/s, ratio= {:.2f} {:.2f}, fuser_time= {:.0f} micro-sec"
+    print("shape= {:d} x {:d} bw_eager= {:.1f} bw_apex= {:.1f} bw_fuser= {:.1f} GB/s, ratio= {:.2f} {:.2f}, fuser_time= {:.0f} micro-sec"
     .format(dim0,dim1,eager,apex,fuser,fuser/eager,fuser/apex, fuser_us))
 
+    #print("shape= {:5d} x {:5d} bw_eager= {:5.1f} bw_apex= {:6.1f} bw_fuser= {:6.1f} GB/s, ratio= {:.2f} {:.2f}, fuser_time= {:4.0f} micro-sec"
+    #.format(dim0,dim1,eager,apex,fuser,fuser/eager,fuser/apex, fuser_us))
 
-#getSpeed(4096,40960)
-popular = [768,1024,2048,4096,8192,10240,20480,40960]
-#popular = [2048]
-for d1 in popular:
-    getSpeed(dim0=2048, dim1=d1)
+def run_all():
+    # bert
+    dim0_list = [8192, 16384, 32768]
+    for d0 in dim0_list:
+        getSpeed(dim0=d0, dim1=1024) 
 
+    popular = [768,1024,2048,4096,8192,10240,20480,40960]
+    #popular = [768,1024,2048,2304,3072,4096,8192,10240,12288,20480,40960]
+    for d1 in popular:
+        getSpeed(dim0=108, dim1=d1)
+
+   
+
+def run_apex():
+    dim0 = 8192
+    dim1 = 10240
+    input_shape = [dim0, dim1]
+    input_dtype = torch.float16
+    x = torch.randn(input_shape, dtype=input_dtype, device='cuda')
+    apx = FastLayerNorm(dim1).half().cuda();
+    out = apx(x)
+    
+def run_fuser():
+    dim0 = 8192
+    dim1 = 10240
+    input_shape = [dim0, dim1]
+    input_dtype = torch.float16
+    x = torch.randn(input_shape, dtype=input_dtype, device='cuda')
+    net_eager = nn.LayerNorm(dim1, dtype= input_dtype).cuda();
+    net_fuser = torch.jit.script(net_eager)
+    for _ in range(3):
+        output = net_fuser(x)
+    clearL2Cache()
+    output = net_fuser(x)
+
+run_all()
+#run_apex()
+#run_fuser()
