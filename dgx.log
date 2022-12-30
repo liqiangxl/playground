@@ -1,0 +1,58 @@
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:21 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:22 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:23 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:24 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:24 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:24 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:24 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:24 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:24 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+STAGE:2022-12-15 22:20:25 124503:124503 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2022-12-15 22:20:25 124503:124503 ActivityProfilerController.cpp:300] Completed Stage: Collection
+/workspace/nf/pytorch/torch/profiler/profiler.py:250: UserWarning: Profiler won't be using warmup, this can skew profiler results
+  warn("Profiler won't be using warmup, this can skew profiler results")
+shape= 2048 x 768 bw_eager= 394.4 bw_apex= 631.1 bw_fuser= 420.7 GB/s, ratio= 1.07 0.67, fuser_time= 15 micro-sec
+shape= 2048 x 1024 bw_eager= 467.2 bw_apex= 700.8 bw_fuser= 525.6 GB/s, ratio= 1.12 0.75, fuser_time= 16 micro-sec
+shape= 2048 x 2048 bw_eager= 672.1 bw_apex= 1120.1 bw_fuser= 800.1 GB/s, ratio= 1.19 0.71, fuser_time= 21 micro-sec
+shape= 2048 x 4096 bw_eager= 819.2 bw_apex= 1291.8 bw_fuser= 1017.8 GB/s, ratio= 1.24 0.79, fuser_time= 33 micro-sec
+shape= 2048 x 8192 bw_eager= 861.0 bw_apex= 1399.1 bw_fuser= 1083.2 GB/s, ratio= 1.26 0.77, fuser_time= 62 micro-sec
+shape= 2048 x 10240 bw_eager= 823.0 bw_apex= 1447.3 bw_fuser= 1119.2 GB/s, ratio= 1.36 0.77, fuser_time= 75 micro-sec
+shape= 2048 x 20480 bw_eager= 822.9 bw_apex= 1165.8 bw_fuser= 1252.8 GB/s, ratio= 1.52 1.07, fuser_time= 134 micro-sec
+shape= 2048 x 40960 bw_eager= 826.9 bw_apex= 1090.0 bw_fuser= 1229.8 GB/s, ratio= 1.49 1.13, fuser_time= 273 micro-sec
