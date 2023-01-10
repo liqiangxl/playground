@@ -1,0 +1,21 @@
+2023-01-06T20:11:45+00:00
+Running ./bin/nvfuser_bench
+Run on (64 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x32)
+  L1 Instruction 32 KiB (x32)
+  L2 Unified 512 KiB (x32)
+  L3 Unified 16384 KiB (x8)
+Load Average: 4.61, 1.75, 0.71
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+name,iterations,real_time,cpu_time,time_unit,bytes_per_second,items_per_second,label,error_occurred,error_message
+"NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/64/112/manual_time",256,545.3,619.155,us,7.53793e+11,,,,
+"NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/128/56/manual_time",473,294.713,367.613,us,6.9737e+11,,,,
+"NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/256/56/manual_time",249,559.68,633.125,us,7.34434e+11,,,,
+"NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/128/56/manual_time",469,294.628,367.899,us,6.97571e+11,,,,
+"NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/256/28/manual_time",792,176.256,248.926,us,5.83053e+11,,,,
+"NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/512/28/manual_time",458,304.611,376.631,us,6.7474e+11,,,,
+"NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/512/14/manual_time",2302,60.4574,136.131,us,8.50062e+11,,"Red On Fastest Dim // Persistent Kernel // Project Persistent Buffers // 3D Schedule // Outer Reduction: cross block / persistent batch - 2 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / vectorize / factor 4/Launch_Parameters[block(8/1/49)/grid(1/1/512)/1568]",,
+"NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/1024/14/manual_time",1390,100.264,172.691,us,1.02514e+12,,"Red On Fastest Dim // Persistent Kernel // Project Persistent Buffers // 3D Schedule // Outer Reduction: cross block / persistent batch - 2 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / vectorize / factor 4/Launch_Parameters[block(8/1/49)/grid(1/1/1024)/1568]",,
+"NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/1024/7/manual_time",3213,43.8573,115.362,us,5.86326e+11,,"Red On Fastest Dim // Persistent Kernel // Project Persistent Buffers // 3D Schedule // Outer Reduction: cross block / persistent batch - 2 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / /Launch_Parameters[block(8/1/49)/grid(1/1/1024)/1568]",,
+"NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/2048/7/manual_time",1867,74.5156,147.161,us,6.90183e+11,,"Red On Fastest Dim // Persistent Kernel // Project Persistent Buffers // 3D Schedule // Outer Reduction: cross block / persistent batch - 2 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / /Launch_Parameters[block(8/1/49)/grid(1/1/2048)/1568]",,

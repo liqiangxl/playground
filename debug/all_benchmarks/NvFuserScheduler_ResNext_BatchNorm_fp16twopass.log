@@ -1,0 +1,27 @@
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 120 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 120 times.
+2023-01-06T20:11:45+00:00
+Running ./bin/nvfuser_bench
+Run on (64 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x32)
+  L1 Instruction 32 KiB (x32)
+  L2 Unified 512 KiB (x32)
+  L3 Unified 16384 KiB (x8)
+Load Average: 4.61, 1.75, 0.71
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                                                                Time             CPU   Iterations UserCounters...
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/64/112/manual_time         545 us          619 us          256 bytes_per_second=702.024G/s
+NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/128/56/manual_time         295 us          368 us          473 bytes_per_second=649.477G/s
+NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/256/56/manual_time         560 us          633 us          249 bytes_per_second=683.995G/s
+NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/128/56/manual_time         295 us          368 us          469 bytes_per_second=649.663G/s
+NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/256/28/manual_time         176 us          249 us          792 bytes_per_second=543.01G/s
+NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/512/28/manual_time         305 us          377 us          458 bytes_per_second=628.401G/s
+NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/512/14/manual_time        60.5 us          136 us         2302 bytes_per_second=791.682G/s Red On Fastest Dim // Persistent Kernel // Project Persistent Buffers // 3D Schedule // Outer Reduction: cross block / persistent batch - 2 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / vectorize / factor 4/Launch_Parameters[block(8/1/49)/grid(1/1/512)/1568]
+NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/1024/14/manual_time        100 us          173 us         1390 bytes_per_second=954.736G/s Red On Fastest Dim // Persistent Kernel // Project Persistent Buffers // 3D Schedule // Outer Reduction: cross block / persistent batch - 2 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / vectorize / factor 4/Launch_Parameters[block(8/1/49)/grid(1/1/1024)/1568]
+NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/1024/7/manual_time        43.9 us          115 us         3213 bytes_per_second=546.058G/s Red On Fastest Dim // Persistent Kernel // Project Persistent Buffers // 3D Schedule // Outer Reduction: cross block / persistent batch - 2 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / /Launch_Parameters[block(8/1/49)/grid(1/1/1024)/1568]
+NvFuserScheduler_ResNext_BatchNorm_fp16___GRAPH/NvFuserScheduler_ResNext_BatchNorm_fp16/128/2048/7/manual_time        74.5 us          147 us         1867 bytes_per_second=642.783G/s Red On Fastest Dim // Persistent Kernel // Project Persistent Buffers // 3D Schedule // Outer Reduction: cross block / persistent batch - 2 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / /Launch_Parameters[block(8/1/49)/grid(1/1/2048)/1568]

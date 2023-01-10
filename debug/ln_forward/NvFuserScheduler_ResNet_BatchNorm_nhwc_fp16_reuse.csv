@@ -1,0 +1,23 @@
+2023-01-06T14:00:39+00:00
+Running ./bin/nvfuser_bench
+Run on (64 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x32)
+  L1 Instruction 32 KiB (x32)
+  L2 Unified 512 KiB (x32)
+  L3 Unified 16384 KiB (x8)
+Load Average: 0.46, 0.25, 0.66
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+name,iterations,real_time,cpu_time,time_unit,bytes_per_second,items_per_second,label,error_occurred,error_message
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/64/112/manual_time",94,1465.83,1540.99,us,5.60831e+11,,,,
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/64/56/manual_time",365,381.969,457.846,us,5.38061e+11,,,,
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/256/56/manual_time",90,1531.05,1606.94,us,5.36945e+11,,,,
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/128/56/manual_time",193,720.535,796.289,us,5.70472e+11,,,,
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/128/28/manual_time",713,195.126,268.273,us,5.26652e+11,,,,
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/512/28/manual_time",150,934.571,1008.12,us,4.39832e+11,,,,
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/256/28/manual_time",341,407.18,483.571,us,5.04758e+11,,,,
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/256/14/manual_time",1233,113.417,188.103,us,4.53073e+11,,,,
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/1024/14/manual_time",372,375.277,451.478,us,5.47717e+11,,,,
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/512/14/manual_time",738,188.653,263.753,us,5.44771e+11,,,,
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/512/7/manual_time",1885,74.9487,149.282,us,3.42933e+11,,,,
+"NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/2048/7/manual_time",745,189.307,264.975,us,5.43085e+11,,,,

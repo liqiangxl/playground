@@ -1,0 +1,12 @@
+2023-01-06T14:13:14+00:00
+Running ./bin/nvfuser_bench
+Run on (64 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x32)
+  L1 Instruction 32 KiB (x32)
+  L2 Unified 512 KiB (x32)
+  L3 Unified 16384 KiB (x8)
+Load Average: 0.79, 0.60, 0.55
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+name,iterations,real_time,cpu_time,time_unit,bytes_per_second,items_per_second,label,error_occurred,error_message
+"NvFuserScheduler_BatchNorm_n512hw32c8_fp16___GRAPH/NvFuserScheduler_BatchNorm_n512hw32c8_fp16/512/32/8/manual_time",4591,30.5204,101.688,us,1.37452e+11,,,,

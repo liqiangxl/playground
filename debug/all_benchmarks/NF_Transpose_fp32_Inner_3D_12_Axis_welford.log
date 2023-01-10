@@ -1,0 +1,186 @@
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 120 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 120 times.
+2023-01-09T19:06:25+00:00
+Running ./bin/nvfuser_bench
+Run on (64 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x32)
+  L1 Instruction 32 KiB (x32)
+  L2 Unified 512 KiB (x32)
+  L3 Unified 16384 KiB (x8)
+Load Average: 0.38, 0.47, 0.45
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+Max register count: 255
+ptxas info    : 3 bytes gmem
+ptxas info    : Compiling entry function '_ZN11CudaCodeGen7kernel1ENS_6TensorIfLi3EEES1_S1_' for 'sm_80'
+ptxas info    : Function properties for _ZN11CudaCodeGen7kernel1ENS_6TensorIfLi3EEES1_S1_
+ptxas         .     0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 16 bytes smem, 448 bytes cmem[0], 8 bytes cmem[2]
+
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.044032 ms, achieved: 1428.84 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.04096 ms, achieved: 1536 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.044032 ms, achieved: 1428.84 GB/s
+kernel1 run in 0.044032 ms, achieved: 1428.84 GB/s
+kernel1 run in 0.044032 ms, achieved: 1428.84 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.043008 ms, achieved: 1462.86 GB/s
+kernel1 run in 0.044032 ms, achieved: 1428.84 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.041984 ms, achieved: 1498.54 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.044032 ms, achieved: 1428.84 GB/s
+kernel1 run in 0.044032 ms, achieved: 1428.84 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.049152 ms, achieved: 1280 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.044032 ms, achieved: 1428.84 GB/s
+kernel1 run in 0.044032 ms, achieved: 1428.84 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.049152 ms, achieved: 1280 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.039936 ms, achieved: 1575.38 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.044032 ms, achieved: 1428.84 GB/s
+kernel1 run in 0.044032 ms, achieved: 1428.84 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.043008 ms, achieved: 1462.86 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.043008 ms, achieved: 1462.86 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.041984 ms, achieved: 1498.54 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.049152 ms, achieved: 1280 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.049152 ms, achieved: 1280 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.049152 ms, achieved: 1280 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.045056 ms, achieved: 1396.36 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.048128 ms, achieved: 1307.23 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+kernel1 run in 0.04608 ms, achieved: 1365.33 GB/s
+kernel1 run in 0.047104 ms, achieved: 1335.65 GB/s
+------------------------------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                                      Time             CPU   Iterations UserCounters...
+------------------------------------------------------------------------------------------------------------------------------------------------
+NF_Transpose_fp32_Inner_3D_12_Axis___GRAPH/NF_Transpose_fp32_Inner_3D_12_Axis/512/320        141 us          141 us           91 bytes_per_second=414.851G/s Tile size: (32,32)/Vectorize size: (4,4)/Launch_Parameters[block(1/1/128)/grid(1/1/5120)/4096]

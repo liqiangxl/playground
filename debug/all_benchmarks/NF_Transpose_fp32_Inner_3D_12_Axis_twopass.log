@@ -1,0 +1,18 @@
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 120 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 120 times.
+2023-01-09T19:07:32+00:00
+Running ./bin/nvfuser_bench
+Run on (64 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x32)
+  L1 Instruction 32 KiB (x32)
+  L2 Unified 512 KiB (x32)
+  L3 Unified 16384 KiB (x8)
+Load Average: 0.27, 0.42, 0.43
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                                      Time             CPU   Iterations UserCounters...
+------------------------------------------------------------------------------------------------------------------------------------------------
+NF_Transpose_fp32_Inner_3D_12_Axis___GRAPH/NF_Transpose_fp32_Inner_3D_12_Axis/512/320        137 us          137 us           93 bytes_per_second=426.261G/s Tile size: (32,32)/Vectorize size: (4,4)/Launch_Parameters[block(1/1/128)/grid(1/1/5120)/4096]

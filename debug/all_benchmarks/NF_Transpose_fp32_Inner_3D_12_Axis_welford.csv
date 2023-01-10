@@ -1,0 +1,12 @@
+2023-01-09T19:06:25+00:00
+Running ./bin/nvfuser_bench
+Run on (64 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x32)
+  L1 Instruction 32 KiB (x32)
+  L2 Unified 512 KiB (x32)
+  L3 Unified 16384 KiB (x8)
+Load Average: 0.38, 0.47, 0.45
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+name,iterations,real_time,cpu_time,time_unit,bytes_per_second,items_per_second,label,error_occurred,error_message
+"NF_Transpose_fp32_Inner_3D_12_Axis___GRAPH/NF_Transpose_fp32_Inner_3D_12_Axis/512/320",91,141.268,141.241,us,4.45443e+11,,"Tile size: (32,32)/Vectorize size: (4,4)/Launch_Parameters[block(1/1/128)/grid(1/1/5120)/4096]",,

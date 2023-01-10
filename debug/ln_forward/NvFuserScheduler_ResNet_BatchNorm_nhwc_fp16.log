@@ -1,0 +1,41 @@
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 120 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 120 times.
+2023-01-06T13:44:02+00:00
+Running ./bin/nvfuser_bench
+Run on (64 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x32)
+  L1 Instruction 32 KiB (x32)
+  L2 Unified 512 KiB (x32)
+  L3 Unified 16384 KiB (x8)
+Load Average: 0.31, 1.19, 1.64
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+try to TranslateApplicableWelford
+welford has been translated= 0
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                                                                        Time             CPU   Iterations UserCounters...
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/64/112/manual_time        1465 us         1539 us           94 bytes_per_second=522.509G/s
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/64/56/manual_time          382 us          457 us          365 bytes_per_second=501.134G/s
+try to TranslateApplicableWelford
+welford has been translated= 0
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/256/56/manual_time        1532 us         1606 us           90 bytes_per_second=499.872G/s
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/128/56/manual_time         721 us          796 us          193 bytes_per_second=531.246G/s
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/128/28/manual_time         195 us          267 us          714 bytes_per_second=490.222G/s
+try to TranslateApplicableWelford
+welford has been translated= 0
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/512/28/manual_time         935 us         1008 us          150 bytes_per_second=409.557G/s
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/256/28/manual_time         407 us          483 us          342 bytes_per_second=470.011G/s
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/256/14/manual_time         113 us          187 us         1232 bytes_per_second=421.949G/s
+try to TranslateApplicableWelford
+welford has been translated= 0
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/1024/14/manual_time        375 us          451 us          372 bytes_per_second=510.142G/s
+try to TranslateApplicableWelford
+welford has been translated= 0
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/512/14/manual_time         189 us          264 us          739 bytes_per_second=507.153G/s
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/512/7/manual_time         74.9 us          148 us         1887 bytes_per_second=319.514G/s
+try to TranslateApplicableWelford
+welford has been translated= 0
+NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_ResNet_BatchNorm_nhwc_fp16/256/2048/7/manual_time         189 us          264 us          744 bytes_per_second=505.894G/s

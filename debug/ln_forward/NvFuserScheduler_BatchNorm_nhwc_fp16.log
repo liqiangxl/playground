@@ -1,0 +1,119 @@
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 120 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 120 times.
+2023-01-06T14:13:41+00:00
+Running ./bin/nvfuser_bench
+Run on (64 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x32)
+  L1 Instruction 32 KiB (x32)
+  L2 Unified 512 KiB (x32)
+  L3 Unified 16384 KiB (x8)
+Load Average: 0.52, 0.55, 0.54
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+fromCompleteFusion
+un-segmented fusion: isValidPersistentFusion= 1
+welford has been translated= 1
+welford_converted= 1
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                                                          Time             CPU   Iterations UserCounters...
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/32/2/manual_time           10.3 us         83.8 us        10000 bytes_per_second=3.03292G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / unroll / factor 4/Launch_Parameters[block(1/64/8)/grid(1/1/4)/2048]
+fromCompleteFusion
+un-segmented fusion: isValidPersistentFusion= 1
+welford has been translated= 1
+welford_converted= 1
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/32/2/manual_time          14.5 us         87.4 us         9526 bytes_per_second=16.9203G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 8 / unroll / factor 4/Launch_Parameters[block(1/64/8)/grid(1/1/4)/2048]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/64/2/manual_time           10.5 us         83.8 us        13710 bytes_per_second=5.96345G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / unroll / factor 4/Launch_Parameters[block(1/64/8)/grid(1/1/8)/2048]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/64/2/manual_time          15.4 us         88.1 us         8952 bytes_per_second=31.7529G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 8 / unroll / factor 4/Launch_Parameters[block(1/64/8)/grid(1/1/8)/2048]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/128/2/manual_time          10.8 us         84.1 us        13309 bytes_per_second=11.603G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / unroll / factor 4/Launch_Parameters[block(1/64/8)/grid(1/1/16)/2048]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/128/2/manual_time         15.7 us         88.2 us         8802 bytes_per_second=62.4385G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 8 / unroll / factor 4/Launch_Parameters[block(1/64/8)/grid(1/1/16)/2048]
+fromCompleteFusion
+un-segmented fusion: isValidPersistentFusion= 1
+welford has been translated= 1
+welford_converted= 1
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/32/8/manual_time           19.1 us         91.7 us         7459 bytes_per_second=25.5969G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 16 / unroll / factor 4/Launch_Parameters[block(1/64/4)/grid(1/1/8)/1024]
+try to TranslateApplicableWelford
+segmented fusion: isValidPersistentFusion= 0
+welford has been translated= 0
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/32/8/manual_time          30.5 us          102 us         4582 bytes_per_second=128.122G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/64/8/manual_time           21.5 us         93.8 us         6590 bytes_per_second=45.4536G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 16 / unroll / factor 4/Launch_Parameters[block(1/64/4)/grid(1/1/16)/1024]
+try to TranslateApplicableWelford
+segmented fusion: isValidPersistentFusion= 0
+welford has been translated= 0
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/64/8/manual_time          44.7 us          116 us         3132 bytes_per_second=174.787G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/128/8/manual_time          21.9 us         93.9 us         6490 bytes_per_second=89.4987G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 16 / unroll / factor 4/Launch_Parameters[block(1/64/4)/grid(1/1/32)/1024]
+try to TranslateApplicableWelford
+segmented fusion: isValidPersistentFusion= 0
+welford has been translated= 0
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/128/8/manual_time         61.4 us          134 us         2281 bytes_per_second=254.555G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/32/64/manual_time           105 us          178 us         1327 bytes_per_second=296.752G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/32/64/manual_time          523 us          599 us          267 bytes_per_second=477.761G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/64/64/manual_time           144 us          218 us          968 bytes_per_second=433.652G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/64/64/manual_time          964 us         1041 us          145 bytes_per_second=518.677G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/128/64/manual_time          247 us          323 us          563 bytes_per_second=505.391G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/128/64/manual_time        1852 us         1929 us           74 bytes_per_second=539.994G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/32/128/manual_time          267 us          343 us          515 bytes_per_second=467.302G/s
+try to TranslateApplicableWelford
+segmented fusion: isValidPersistentFusion= 0
+welford has been translated= 0
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/32/128/manual_time        2086 us         2162 us           66 bytes_per_second=479.32G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/64/128/manual_time          488 us          564 us          285 bytes_per_second=511.854G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/64/128/manual_time        3859 us         3934 us           36 bytes_per_second=518.242G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/128/128/manual_time         937 us         1013 us          149 bytes_per_second=533.894G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/512/128/128/manual_time       7547 us         7623 us           18 bytes_per_second=530.033G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/2/2/manual_time             7.56 us         81.3 us        17591 bytes_per_second=14.1263M/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / unroll / factor 4/Launch_Parameters[block(1/2/8)/grid(1/1/1)/64]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/2/2/manual_time             7.97 us         81.6 us        16905 bytes_per_second=36.3982M/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / unroll / factor 4/Launch_Parameters[block(1/8/8)/grid(1/1/1)/256]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/2/2/manual_time            9.61 us         83.1 us        14096 bytes_per_second=208.063M/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / unroll / factor 4/Launch_Parameters[block(1/64/8)/grid(1/1/1)/2048]
+fromCompleteFusion
+un-segmented fusion: isValidPersistentFusion= 1
+welford has been translated= 1
+welford_converted= 1
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/8/2/manual_time             6.98 us         80.7 us        19201 bytes_per_second=61.1688M/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / /Launch_Parameters[block(1/8/8)/grid(1/1/1)/256]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/8/2/manual_time             7.57 us         81.4 us        17706 bytes_per_second=153.232M/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / /Launch_Parameters[block(1/32/8)/grid(1/1/1)/1024]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/8/2/manual_time            9.42 us         83.0 us        14245 bytes_per_second=848.945M/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / unroll / factor 4/Launch_Parameters[block(1/64/8)/grid(1/1/1)/2048]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/32/2/manual_time            7.28 us         81.1 us        18421 bytes_per_second=234.614M/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / /Launch_Parameters[block(1/8/8)/grid(1/1/4)/256]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/32/2/manual_time            7.98 us         81.7 us        16767 bytes_per_second=581.068M/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / /Launch_Parameters[block(1/32/8)/grid(1/1/4)/1024]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/32/2/manual_time           10.3 us         83.8 us        10000 bytes_per_second=3.03388G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / unroll / factor 4/Launch_Parameters[block(1/64/8)/grid(1/1/4)/2048]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/2/8/manual_time             9.07 us         82.7 us        16111 bytes_per_second=112.671M/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / unroll / factor 4/Launch_Parameters[block(1/32/8)/grid(1/1/1)/1024]
+fromCompleteFusion
+un-segmented fusion: isValidPersistentFusion= 1
+welford has been translated= 1
+welford_converted= 1
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/2/8/manual_time             10.6 us         84.0 us        12892 bytes_per_second=373.997M/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 2 / unroll / factor 4/Launch_Parameters[block(1/64/8)/grid(1/1/1)/2048]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/2/8/manual_time            19.1 us         91.8 us         7464 bytes_per_second=1.602G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 16 / unroll / factor 4/Launch_Parameters[block(1/64/4)/grid(1/1/1)/1024]
+fromCompleteFusion
+un-segmented fusion: isValidPersistentFusion= 1
+welford has been translated= 1
+welford_converted= 1
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/8/8/manual_time             9.45 us         83.0 us        15292 bytes_per_second=432.817M/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / unroll / factor 2/Launch_Parameters[block(1/64/8)/grid(1/1/1)/2048]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/8/8/manual_time             10.3 us         83.8 us        13253 bytes_per_second=1.49865G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 2 / unroll / factor 4/Launch_Parameters[block(1/64/8)/grid(1/1/1)/2048]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/8/8/manual_time            15.7 us         88.6 us         9037 bytes_per_second=7.76905G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 16 / unroll / factor 4/Launch_Parameters[block(1/64/4)/grid(1/1/2)/1024]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/32/8/manual_time            9.97 us         83.4 us        14417 bytes_per_second=1.60147G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / unroll / factor 2/Launch_Parameters[block(1/64/8)/grid(1/1/4)/2048]
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/32/8/manual_time            18.6 us         89.7 us         7543 bytes_per_second=3.31746G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/32/8/manual_time           19.1 us         91.5 us         7466 bytes_per_second=25.5904G/s Red On Slow Dim // Persistent Kernel // Project Persistent Buffers //  // Iteration Domain: multiple reductions per block /  // Inner Reduction Domain: cross block reduction / persistent batch - 16 / unroll / factor 4/Launch_Parameters[block(1/64/4)/grid(1/1/8)/1024]
+try to TranslateApplicableWelford
+segmented fusion: isValidPersistentFusion= 0
+welford has been translated= 0
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/2/64/manual_time            19.9 us         91.1 us         7085 bytes_per_second=3.07019G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/2/64/manual_time            22.3 us         93.1 us         6522 bytes_per_second=10.9479G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/2/64/manual_time           26.4 us         97.1 us         5232 bytes_per_second=74.1065G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/8/64/manual_time            21.2 us         92.0 us         6594 bytes_per_second=11.5124G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/8/64/manual_time            22.5 us         93.6 us         6230 bytes_per_second=43.3441G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/8/64/manual_time           41.8 us          114 us         3424 bytes_per_second=186.78G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/32/64/manual_time           23.9 us         95.0 us         5700 bytes_per_second=40.9528G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/32/64/manual_time           30.3 us          102 us         4636 bytes_per_second=128.791G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/32/64/manual_time          77.3 us          150 us         1813 bytes_per_second=404.317G/s
+try to TranslateApplicableWelford
+segmented fusion: isValidPersistentFusion= 0
+welford has been translated= 0
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/2/256/manual_time           24.1 us         95.3 us         6009 bytes_per_second=40.4393G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/2/256/manual_time           29.0 us          100 us         4688 bytes_per_second=134.691G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/2/256/manual_time           101 us          172 us         1380 bytes_per_second=310.369G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/8/256/manual_time           28.2 us         99.4 us         4951 bytes_per_second=138.378G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/8/256/manual_time           56.0 us          129 us         2506 bytes_per_second=279.027G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/8/256/manual_time           238 us          313 us          587 bytes_per_second=524.329G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/2/32/256/manual_time          70.7 us          144 us         1998 bytes_per_second=220.964G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/8/32/256/manual_time           157 us          231 us          898 bytes_per_second=399.043G/s
+NvFuserScheduler_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_BatchNorm_nhwc_fp16/64/32/256/manual_time         1037 us         1114 us          133 bytes_per_second=482.141G/s

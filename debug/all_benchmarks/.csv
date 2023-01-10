@@ -1,0 +1,14 @@
+2023-01-09T18:48:39+00:00
+Running ./bin/nvfuser_bench
+Run on (64 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x32)
+  L1 Instruction 32 KiB (x32)
+  L2 Unified 512 KiB (x32)
+  L3 Unified 16384 KiB (x8)
+Load Average: 0.06, 0.04, 0.01
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+name,iterations,real_time,cpu_time,time_unit,bytes_per_second,items_per_second,label,error_occurred,error_message
+"NvFuserScheduler_BatchNorm_fp32___GRAPH/NvFuserScheduler_BatchNorm_fp32/64/32/2/manual_time",1681,8.68968,83.2943,us,7.65966e+09,,"Red On Fastest Dim // Persistent Kernel // 3D Schedule // Outer Reduction: cross block / persistent batch - 1 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / vectorize / factor 4/Launch_Parameters[block(16/1/1)/grid(1/1/32)/64]",,
+"NvFuserScheduler_BatchNorm_fp32___GRAPH/NvFuserScheduler_BatchNorm_fp32/512/32/2/manual_time",1354,10.6249,85.1848,us,4.94414e+10,,"Red On Fastest Dim // Persistent Kernel // 3D Schedule // Outer Reduction: cross block / persistent batch - 4 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / vectorize / factor 4/Launch_Parameters[block(32/1/1)/grid(1/1/32)/128]",,
+"NvFuserScheduler_BatchNorm_fp32___GRAPH/NvFuserScheduler_BatchNorm_fp32/64/64/2/manual_time",1561,8.72138,83.3866,us,1.52636e+10,,"Red On Fastest Dim // Persistent Kernel // 3D Schedule // Outer Reduction: cross block / persistent batch - 1 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / vectorize / factor 4/Launch_Parameters[block(16/1/1)/grid(1/1/64)/64]",,

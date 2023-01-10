@@ -1,0 +1,20 @@
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_fp16 will be repeated at least 120 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 270 times.
+The number of inputs is very large. NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16___GRAPH/NvFuserScheduler_TIMM_BatchNorm_nhwc_BWD_fp16 will be repeated at least 120 times.
+2023-01-09T18:48:39+00:00
+Running ./bin/nvfuser_bench
+Run on (64 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x32)
+  L1 Instruction 32 KiB (x32)
+  L2 Unified 512 KiB (x32)
+  L3 Unified 16384 KiB (x8)
+Load Average: 0.06, 0.04, 0.01
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                                                                                                           Time             CPU   Iterations UserCounters...
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NvFuserScheduler_BatchNorm_fp32___GRAPH/NvFuserScheduler_BatchNorm_fp32/64/32/2/manual_time                                                                      8.69 us         83.3 us         1681 bytes_per_second=7.13361G/s Red On Fastest Dim // Persistent Kernel // 3D Schedule // Outer Reduction: cross block / persistent batch - 1 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / vectorize / factor 4/Launch_Parameters[block(16/1/1)/grid(1/1/32)/64]
+NvFuserScheduler_BatchNorm_fp32___GRAPH/NvFuserScheduler_BatchNorm_fp32/512/32/2/manual_time                                                                     10.6 us         85.2 us         1354 bytes_per_second=46.0459G/s Red On Fastest Dim // Persistent Kernel // 3D Schedule // Outer Reduction: cross block / persistent batch - 4 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / vectorize / factor 4/Launch_Parameters[block(32/1/1)/grid(1/1/32)/128]
+NvFuserScheduler_BatchNorm_fp32___GRAPH/NvFuserScheduler_BatchNorm_fp32/64/64/2/manual_time                                                                      8.72 us         83.4 us         1561 bytes_per_second=14.2154G/s Red On Fastest Dim // Persistent Kernel // 3D Schedule // Outer Reduction: cross block / persistent batch - 1 /  // Iteration Domain:  // Inner Reduction Domain: cross block reduction / persistent batch - 1 / vectorize / factor 4/Launch_Parameters[block(16/1/1)/grid(1/1/64)/64]

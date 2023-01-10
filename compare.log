@@ -1,1 +1,0 @@
-shape= 512 x 4096 bw_eager= 612.0 bw_apex= 296.4 bw_fuser= 377.5 GB/s, ratio= 0.62 1.27
